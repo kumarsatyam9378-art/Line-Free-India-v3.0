@@ -1,6 +1,17 @@
 import { Request, Response } from 'express';
 import { prisma } from '../../lib/prisma';
-import { subDays, startOfDay } from 'date-fns';
+
+const subDays = (date: Date, days: number): Date => {
+  const next = new Date(date);
+  next.setDate(next.getDate() - days);
+  return next;
+};
+
+const startOfDay = (date: Date): Date => {
+  const next = new Date(date);
+  next.setHours(0, 0, 0, 0);
+  return next;
+};
 
 export const getOverviewStats = async (req: Request, res: Response) => {
   try {
@@ -31,9 +42,9 @@ export const getOverviewStats = async (req: Request, res: Response) => {
       where: { businessId: bid }
     });
 
-    const totalRevenue = orders.reduce((sum, o) => sum + o.Total, 0);
+    const totalRevenue = orders.reduce((sum: number, o) => sum + o.Total, 0);
     const avgRating = reviews.length > 0
-      ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
+      ? reviews.reduce((sum: number, r) => sum + r.rating, 0) / reviews.length
       : 4.8; // default simulation
 
     res.json({
