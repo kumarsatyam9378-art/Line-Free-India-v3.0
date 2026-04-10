@@ -116,12 +116,15 @@ import RewardsCenter from './pages/RewardsCenter';
 import Wallet from './pages/Wallet';
 import GiftCards from './pages/GiftCards';
 
-const OWNER_EMAIL = 'satyamkumar56021@gmail.com';
+const OWNER_EMAILS = new Set([
+  'kumarsatyam560@gmail.com',
+  'satyamkumar56021@gmail.com',
+]);
 
 function AdminGuard({ children }: { children: React.ReactNode }) {
   const { user, loading } = useApp();
   if (loading) return <div className="min-h-screen flex items-center justify-center"><div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" /></div>;
-  if (!user || user.email !== OWNER_EMAIL) return <Navigate to="/" replace />;
+  if (!user || !user.email || !OWNER_EMAILS.has(user.email.toLowerCase())) return <Navigate to="/" replace />;
   return <>{children}</>;
 }
 
