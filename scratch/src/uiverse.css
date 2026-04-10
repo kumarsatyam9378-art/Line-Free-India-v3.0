@@ -1,0 +1,256 @@
+/* Premium UI Components for Line Free India SuperApp */
+
+/* Uiverse Button Neon */
+.uv-btn-neon {
+  padding: 10px 20px;
+  border-radius: 50em;
+  background-color: transparent;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+.uv-btn-neon:hover {
+  background-color: #00ffcc;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.6), 0 0 40px rgba(0, 255, 204, 0.4);
+}
+
+/* Uiverse Button Sahara */
+.uv-btn-sahara {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  border-radius: 20px;
+  box-shadow: inset 0 0 2px rgba(255,255,255,0.1), 0 10px 30px rgba(0,0,0,0.5);
+  transition: all 0.3s;
+}
+
+.uv-btn-sahara:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 2px rgba(255,255,255,0.2), 0 20px 40px rgba(0,255,204,0.3);
+}
+
+/* Pack Container (Subscription) */
+.uv-pack-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 24px;
+  padding: 30px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.uv-pack-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 30px rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.uv-pack-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+}
+
+.uv-header {
+  margin-bottom: 20px;
+}
+
+.uv-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.uv-price-container {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.uv-price {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+}
+
+.uv-lists {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.uv-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #adb5bd;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.uv-list svg {
+  width: 20px;
+  height: 20px;
+  stroke: #10b981;
+}
+
+.uv-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.uv-button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.uv-btn-skew {
+  padding: 16px 24px;
+  background: #3b82f6;
+  color: white;
+  font-weight: 900;
+  border-radius: 12px;
+  transform: skew(-10deg);
+  transition: all 0.3s;
+}
+
+.uv-btn-skew div {
+  transform: skew(10deg);
+}
+
+.uv-btn-skew:hover {
+  background: #2563eb;
+  transform: skew(-10deg) scale(1.05);
+}
+
+.uv-pulse-pill {
+  border-radius: 50px;
+  background: #10b981;
+  color: #000;
+  font-weight: 900;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: uv-pulse 2s infinite;
+  transition: all 0.3s;
+}
+
+.uv-pulse-pill:hover {
+  background: #059669;
+}
+
+@keyframes uv-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.uv-btn-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.uv-btn-slide .icon {
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+.uv-btn-slide:hover .icon {
+  transform: translateX(0);
+}
+
+.uv-btn-hello {
+  background: #ef4444;
+  color: white;
+  border-radius: 12px;
+  font-weight: 900;
+  padding: 16px;
+}
+.uv-btn-hello:before { content: attr(data-text-front); }
+.uv-btn-hello:hover:before { content: attr(data-text-back); }
+
+/* Premium Dark Variations based on Uiverse.io */
+.khel-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #09090b 0%, #18181b 100%);
+  color: #00F0FF;
+  border: 1px solid rgba(0,240,255,0.2);
+  box-shadow: inset 0 0 15px rgba(0,240,255,0.05), 0 10px 30px -10px rgba(0,240,255,0.3);
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+}
+
+.khel-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,240,255,0.1), transparent);
+  transition: .5s;
+}
+
+.khel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 20px rgba(0,240,255,0.1), 0 15px 40px -10px rgba(0,240,255,0.4);
+  border-color: rgba(0,240,255,0.4);
+  color: #ffffff;
+}
+
+.khel-btn:hover::before { left: 100%; }
+
+.khel-btn:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 0 10px rgba(0,240,255,0.1), 0 5px 15px -10px rgba(0,240,255,0.2);
+}
+
+.gagan-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; width: 100%; padding: 1.2rem; border-radius: 16px;
+  background: linear-gradient(135deg, #18181b 0%, #09090b 100%);
+  color: #ffffff; border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+  font-family: inherit; font-weight: 800; font-size: 15px;
+  letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s;
+}
+
+.gagan-btn:hover {
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.6);
+  color: #00F0FF;
+}
+
+.gagan-btn:active { transform: translateY(0); }

@@ -1,0 +1,331 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useApp } from '../store/AppContext';
+import { db } from '../firebase';
+import { doc, getDoc } from 'firebase/firestore';
+import BackButton from '../components/BackButton';
+import FloatingThemeToggle from '../components/FloatingThemeToggle';
+import { motion } from 'framer-motion';
+
+export default function BarberAuth() {
+  const { signInWithGoogle, signInWithEmail, signUpWithEmail, setRole, user, businessProfile, t } = useApp();
+  const nav = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isSignUp, setIsSignUp] = useState(false);
+
+  const handleLogin = async () => {
+    setLoading(true);
+    setError('');
+    try {
+      const result = await signInWithGoogle();
+      setRole('business');
+      const uid = (result as any)?.user?.uid || (result as any)?.uid;
+      if (uid) {
+        const profileDoc = await getDoc(doc(db, 'barbers', uid));
+        if (profileDoc.exists()) {
+          nav('/barber/home', { replace: true });
+        } else {
+          nav('/barber/setup', { replace: true });
+        }
+      } else if (businessProfile) {
+        nav('/barber/home', { replace: true });
+      } else {
+        nav('/barber/setup', { replace: true });
+      }
+    } catch (e: any) {
+      setError(e?.message || 'Login failed');
+    }
+    setLoading(false);
+  };
+
+  const handleEmailAuth = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !password) {
+      setError('Please enter both email and password.');
+      return;
+    }
+    setError('');
+    setLoading(true);
+    try {
+      let result;
+      if (isSignUp) {
+        result = await signUpWithEmail(email, password);
+      } else {
+        result = await signInWithEmail(email, password);
+      }
+      setRole('business');
+      const uid = (result as any)?.user?.uid || user?.uid;
+      if (uid) {
+        const profileDoc = await getDoc(doc(db, 'barbers', uid));
+        if (profileDoc.exists()) {
+          nav('/barber/home', { replace: true });
+        } else {
+          nav('/barber/setup', { replace: true });
+        }
+      } else if (businessProfile) {
+        nav('/barber/home', { replace: true });
+      } else {
+        nav('/barber/setup', { replace: true });
+      }
+    } catch (err: any) {
+      if (err?.code === 'auth/email-already-in-use') setError('Email already in use. Please sign in.');
+      else if (err?.code === 'auth/wrong-password' || err?.code === 'auth/user-not-found') setError('Invalid email or password.');
+      else setError(err?.message || 'Authentication failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
+  if (user && businessProfile) {
+    nav('/barber/home', { replace: true });
+    return null;
+  }
+
+  // Already logged in — Neuromorphic profile card
+  if (user && !businessProfile) {
+    return (
+      <div className="min-h-screen flex flex-col p-6 animate-fadeIn relative overflow-hidden">
+        <FloatingThemeToggle />
+        <div className="fixed inset-0 -z-10">
+          <div className="absolute inset-0" style={{ background: 'var(--color-bg)' }} />
+          <motion.div
+            animate={{ x:['-20%','20%','-20%'], y:['-10%','10%','-10%'] }}
+            transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
+            className="ambient-orb violet"
+            style={{ top: '-10%', right: '-10%' }}
+          />
+        </div>
+        <BackButton to="/role" />
+        <div className="flex-1 flex flex-col items-center justify-center text-center relative z-10">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="neu-panel p-8 flex flex-col items-center max-w-xs w-full"
+            style={{ borderRadius: '28px' }}
+          >
+            <div 
+              className="w-20 h-20 rounded-full overflow-hidden mb-5"
+              style={{ border: '3px solid rgba(0,240,255,0.2)', boxShadow: '0 0 25px rgba(0,240,255,0.15)' }}
+            >
+              {user.photoURL ? <img src={user.photoURL} className="w-20 h-20 object-cover" alt="" /> : <div className="w-20 h-20 flex items-center justify-center text-4xl" style={{ background: '#1a1a1d' }}>🏪</div>}
+            </div>
+            <p className="text-white text-sm font-bold mb-1">{user.displayName}</p>
+            <p className="text-[10px] font-semibold mb-6" style={{ color: '#52525B' }}>{user.email}</p>
+            <button 
+              onClick={() => { setRole('business'); nav('/barber/setup'); }} 
+              className="neu-action-btn-primary w-full py-4 px-6 font-black text-sm"
+              style={{ borderRadius: '16px' }}
+            >
+              Setup Your Business →
+            </button>
+          </motion.div>
+        </div>
+      </div>
+    );
+  }
+
+  // Login screen — Onyx-Titanium premium
+  return (
+    <div className="min-h-screen flex flex-col p-6 animate-fadeIn relative overflow-hidden">
+      <FloatingThemeToggle />
+
+      {/* Ambient glow background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0" style={{ background: 'var(--color-bg)' }} />
+        <motion.div
+          animate={{ x:['-15%','15%','-15%'], y:['-10%','10%','-10%'], scale:[1, 1.2, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
+          className="ambient-orb violet"
+          style={{ top: '-5%', left: '-10%' }}
+        />
+        <motion.div
+          animate={{ x:['10%','-10%','10%'], y:['5%','-10%','5%'] }}
+          transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut' }}
+          className="ambient-orb cyan"
+          style={{ bottom: '-5%', right: '-10%', width: '200px', height: '200px' }}
+        />
+      </div>
+
+      <BackButton to="/role" />
+
+      <div className="flex-1 flex flex-col items-center justify-center relative z-10">
+        {/* Premium icon */}
+        <motion.div 
+          initial={{ scale: 0, rotate: -180 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ type: 'spring', damping: 12 }}
+          className="w-20 h-20 flex items-center justify-center mb-6 holo-card"
+          style={{ 
+            borderRadius: '24px',
+            boxShadow: '0 0 40px rgba(139,92,246,0.2), inset 0 0 20px rgba(139,92,246,0.05)',
+            border: '1px solid rgba(139,92,246,0.2)'
+          }}
+        >
+          <span className="text-4xl" style={{ filter: 'drop-shadow(0 0 15px rgba(139,92,246,0.5))' }}>⚡</span>
+        </motion.div>
+
+        <motion.h1 
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-3xl font-black uppercase mb-2 type-display"
+          style={{ 
+            letterSpacing: '4px',
+            background: 'linear-gradient(135deg, #fff, #8B5CF6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}
+        >
+          {t('role.business')}
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.35 }}
+          className="text-sm text-center mb-8 max-w-xs font-medium"
+          style={{ color: '#71717A' }}
+        >
+          Register your business & manage queue digitally
+        </motion.p>
+
+        {error && <p className="text-[10px] mb-4 text-center font-bold uppercase tracking-wider p-3 rounded-2xl" style={{ color: '#F43F5E', background: 'rgba(244,63,94,0.06)', border: '1px solid rgba(244,63,94,0.15)' }}>{error}</p>}
+
+        <motion.div initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.45, type: 'spring' }} className="w-full max-w-xs">
+          <form onSubmit={handleEmailAuth} className="flex flex-col gap-3 mb-6">
+            <input 
+              type="email" 
+              placeholder="Business Email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full p-4 text-sm outline-none transition-all placeholder:text-zinc-600 focus:border-[#8B5CF6]"
+              style={{
+                borderRadius: '18px',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.06)',
+                color: '#fff',
+                boxShadow: 'inset 0 4px 10px rgba(0,0,0,0.5)'
+              }}
+            />
+            <input 
+              type="password" 
+              placeholder="Password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-4 text-sm outline-none transition-all placeholder:text-zinc-600 focus:border-[#8B5CF6]"
+              style={{
+                borderRadius: '18px',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.06)',
+                color: '#fff',
+                boxShadow: 'inset 0 4px 10px rgba(0,0,0,0.5)'
+              }}
+            />
+            <button 
+              type="submit"
+              disabled={loading}
+              className="w-full py-4 px-6 mt-2 flex items-center justify-center gap-3 font-black text-sm transition-all active:scale-95"
+              style={{
+                borderRadius: '18px',
+                background: 'linear-gradient(135deg, rgba(139,92,246,0.2), rgba(0,240,255,0.2))',
+                border: '1px solid rgba(139,92,246,0.3)',
+                color: '#8B5CF6',
+                boxShadow: '0 0 20px rgba(139,92,246,0.1)'
+              }}
+            >
+              {loading ? (
+                <div className="w-5 h-5 border-2 border-[#8B5CF6]/30 border-t-[#8B5CF6] rounded-full animate-spin" />
+              ) : (isSignUp ? 'REGISTER BUSINESS' : 'BUSINESS LOGIN')}
+            </button>
+          </form>
+
+          <div className="flex items-center justify-between mb-6">
+            <div className="h-px bg-zinc-800 flex-1" />
+            <span className="px-4 text-[10px] font-bold text-zinc-500 uppercase tracking-widest">OR</span>
+            <div className="h-px bg-zinc-800 flex-1" />
+          </div>
+
+          <button 
+            onClick={handleLogin} 
+            disabled={loading}
+            type="button"
+            className="w-full py-4 px-8 flex items-center justify-center gap-3 font-black text-sm transition-all active:scale-95"
+            style={{
+              borderRadius: '18px',
+              background: 'linear-gradient(135deg, #141416, #1a1a1d)',
+              boxShadow: '8px 8px 16px #0a0a0b, -8px -8px 16px #1e1e23',
+              border: '1px solid rgba(255,255,255,0.04)',
+              color: '#fff'
+            }}
+          >
+            {loading ? (
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-5 h-5 border-2 border-white/30 border-t-[#8B5CF6] rounded-full animate-spin" />
+                <span style={{ color: '#71717A' }}>CONNECTING...</span>
+              </div>
+            ) : (
+              <>
+                <svg width="18" height="18" viewBox="0 0 48 48">
+                  <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                  <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                  <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                  <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                </svg>
+                {t('auth.google')}
+              </>
+            )}
+          </button>
+
+          <div className="mt-6 text-center">
+            <button 
+              type="button"
+              onClick={() => setIsSignUp(!isSignUp)}
+              className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider hover:text-white transition-colors"
+            >
+              {isSignUp ? 'Login to existing business' : 'Register a new business'}
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Features — Premium glass card */}
+        <motion.div 
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="mt-8 w-full max-w-xs"
+        >
+          <div 
+            className="glass-panel p-5"
+            style={{ borderRadius: '22px' }}
+          >
+            <p className="text-xs font-black uppercase tracking-[3px] mb-4" style={{ color: '#00F0FF' }}>⚡ Business OS</p>
+            <ul className="space-y-3">
+              {[
+                'Works for all 200+ business types',
+                'Digital queue & booking management',
+                'QR code for instant customer access',
+                'Analytics & revenue tracking',
+                '30 days free trial included',
+              ].map((item, i) => (
+                <motion.li 
+                  key={i}
+                  initial={{ x: -15, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.8 + i * 0.1 }}
+                  className="flex items-center gap-3 text-xs font-medium"
+                  style={{ color: '#A1A1AA' }}
+                >
+                  <span style={{ color: '#10B981' }}>✓</span> {item}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,215 @@
+src/App.tsx(70,1): error TS6133: 'CustomerARVirtualStore' is declared but its value is never read.
+src/App.tsx(88,8): error TS2300: Duplicate identifier 'TimeDilationChamber'.
+src/App.tsx(89,8): error TS2300: Duplicate identifier 'TachyonSensorGridMfg'.
+src/App.tsx(109,1): error TS6133: 'BatchScheduler' is declared but its value is never read.
+src/App.tsx(110,1): error TS6133: 'SmartInventory' is declared but its value is never read.
+src/App.tsx(139,1): error TS6133: 'StaffAttendance' is declared but its value is never read.
+src/App.tsx(144,1): error TS6133: 'DigitalMenu' is declared but its value is never read.
+src/App.tsx(163,1): error TS6133: 'RoomBooking' is declared but its value is never read.
+src/App.tsx(170,1): error TS6133: 'CustomerFeedback' is declared but its value is never read.
+src/App.tsx(171,1): error TS6133: 'AMCTracker' is declared but its value is never read.
+src/App.tsx(172,1): error TS6133: 'ReferralProgram' is declared but its value is never read.
+src/App.tsx(179,1): error TS6133: 'ElectricianJobCard' is declared but its value is never read.
+src/App.tsx(239,1): error TS6133: 'CateringService' is declared but its value is never read.
+src/App.tsx(247,1): error TS6133: 'LaundryService' is declared but its value is never read.
+src/App.tsx(270,1): error TS6133: 'InsuranceAgent' is declared but its value is never read.
+src/App.tsx(271,1): error TS6133: 'NurseryGarden' is declared but its value is never read.
+src/App.tsx(278,1): error TS6133: 'TailorShop' is declared but its value is never read.
+src/App.tsx(285,1): error TS6133: 'ElectricianServices' is declared but its value is never read.
+src/App.tsx(286,1): error TS6133: 'PlumberServices' is declared but its value is never read.
+src/App.tsx(293,1): error TS6133: 'JewelleryShop' is declared but its value is never read.
+src/App.tsx(294,1): error TS6133: 'BakeryShop' is declared but its value is never read.
+src/App.tsx(299,1): error TS6133: 'WaterTanker' is declared but its value is never read.
+src/App.tsx(301,1): error TS6133: 'TentHouse' is declared but its value is never read.
+src/App.tsx(303,1): error TS6133: 'PhotographyStudio' is declared but its value is never read.
+src/App.tsx(306,1): error TS6133: 'FreightBroker' is declared but its value is never read.
+src/App.tsx(307,1): error TS6133: 'AstrologyCenter' is declared but its value is never read.
+src/App.tsx(326,1): error TS6133: 'EventManagement' is declared but its value is never read.
+src/App.tsx(328,1): error TS6133: 'ConstructionFirm' is declared but its value is never read.
+src/App.tsx(329,1): error TS6133: 'CoachingCenter' is declared but its value is never read.
+src/App.tsx(333,1): error TS6133: 'ElectricianService' is declared but its value is never read.
+src/App.tsx(334,1): error TS6133: 'PlumberService' is declared but its value is never read.
+src/App.tsx(346,1): error TS6133: 'IceCreamParlor' is declared but its value is never read.
+src/App.tsx(356,1): error TS6133: 'ParkingLot' is declared but its value is never read.
+src/App.tsx(357,1): error TS6133: 'WasteManagement' is declared but its value is never read.
+src/App.tsx(371,1): error TS6133: 'AMCService' is declared but its value is never read.
+src/App.tsx(382,1): error TS6133: 'CourierOffice' is declared but its value is never read.
+src/App.tsx(383,1): error TS6133: 'EventSecurity' is declared but its value is never read.
+src/App.tsx(386,1): error TS6133: 'AstrologyService' is declared but its value is never read.
+src/App.tsx(389,1): error TS6133: 'PestControl' is declared but its value is never read.
+src/App.tsx(394,1): error TS6133: 'CarRental' is declared but its value is never read.
+src/App.tsx(397,1): error TS6133: 'CyberCafe' is declared but its value is never read.
+src/App.tsx(408,1): error TS6133: 'NurserySchool' is declared but its value is never read.
+src/App.tsx(425,1): error TS6133: 'InteriorDesign' is declared but its value is never read.
+src/App.tsx(427,1): error TS6133: 'OpticalShop' is declared but its value is never read.
+src/App.tsx(432,1): error TS6133: 'CCTVInstall' is declared but its value is never read.
+src/App.tsx(434,1): error TS6133: 'SolarInstall' is declared but its value is never read.
+src/App.tsx(436,1): error TS6133: 'CarpetSeller' is declared but its value is never read.
+src/App.tsx(439,1): error TS6133: 'CarBatteryShop' is declared but its value is never read.
+src/App.tsx(440,1): error TS6133: 'Boutique' is declared but its value is never read.
+src/App.tsx(450,1): error TS6133: 'ElectronicsRepair' is declared but its value is never read.
+src/App.tsx(453,1): error TS6133: 'MattressStore' is declared but its value is never read.
+src/App.tsx(468,1): error TS6133: 'CementDealer' is declared but its value is never read.
+src/App.tsx(480,1): error TS6133: 'BorewellContractor' is declared but its value is never read.
+src/App.tsx(759,8): error TS2300: Duplicate identifier 'TachyonSensorGridMfg'.
+src/App.tsx(803,8): error TS2300: Duplicate identifier 'TimeDilationChamber'.
+src/App.tsx(1032,86): error TS2304: Cannot find name 'GeneticArkReplicator'.
+src/components/BottomNav.tsx(62,29): error TS6133: 'i' is declared but its value is never read.
+src/components/BottomSheet.tsx(1,1): error TS6133: 'useState' is declared but its value is never read.
+src/components/QuickActions.tsx(13,9): error TS6133: 'catInfo' is declared but its value is never read.
+src/components/SwipeCard.tsx(19,10): error TS6133: 'isDragging' is declared but its value is never read.
+src/components/ToastSystem.tsx(1,20): error TS6133: 'useEffect' is declared but its value is never read.
+src/config/businessTools.ts(22,14): error TS2741: Property 'event_planner' is missing in type '{ men_salon: { label: string; icon: string; path: string; color: string; description: string; }[]; beauty_parlour: { label: string; icon: string; path: string; color: string; description: string; }[]; unisex_salon: { ...; }[]; ... 12 more ...; other: { ...; }[]; }' but required in type 'Record<BusinessCategory, ToolItem[]>'.
+src/config/categoryThemes.ts(29,14): error TS2741: Property 'event_planner' is missing in type '{ men_salon: { gradient: string; bgGradient: string; accent: string; accentLight: string; btnBg: string; btnText: string; statusOpen: string; greeting: string; ownerTitle: string; dashTitle: string; queueLabel: string; actionLabel: string; }; ... 14 more ...; other: { ...; }; }' but required in type 'Record<BusinessCategory, CategoryTheme>'.
+src/config/designTokens.ts(18,14): error TS2741: Property 'event_planner' is missing in type '{ men_salon: { fontFamily: string; colors: { primary: string; primaryDark: string; primaryLight: string; accent: string; cardPrimary: string; cardSecondary: string; backgroundBase: string; textBase: string; textMuted: string; }; }; ... 14 more ...; other: { ...; }; }' but required in type 'Record<BusinessCategory, ThemeTokens>'.
+src/dashboards/HospitalDashboard.tsx(56,21): error TS6133: 'i' is declared but its value is never read.
+src/dashboards/HospitalDashboard.tsx(84,23): error TS6133: 'i' is declared but its value is never read.
+src/dashboards/LawFirmDashboard.tsx(60,23): error TS6133: 'i' is declared but its value is never read.
+src/dashboards/RepairDashboard.tsx(71,25): error TS6133: 'i' is declared but its value is never read.
+src/dashboards/SpaDashboard.tsx(105,23): error TS6133: 'i' is declared but its value is never read.
+src/pages/AgriStore.tsx(4,178): error TS6133: 'setUnit' is declared but its value is never read.
+src/pages/AIPredictiveCRM.tsx(2,1): error TS6133: 'useApp' is declared but its value is never read.
+src/pages/AlbumDeliveryTracker.tsx(19,24): error TS6133: 'setDeliveryType' is declared but its value is never read.
+src/pages/AMCContractManager.tsx(47,20): error TS2345: Argument of type '{ status: string; id: string; clientName: string; phone: string; address: string; startDate: string; endDate: string; unitsCovered: number; servicesPerYear: number; servicesCompleted: number; contractValue: number; notes: string; }[]' is not assignable to parameter of type 'SetStateAction<MaintenanceContract[]>'.
+  Type '{ status: string; id: string; clientName: string; phone: string; address: string; startDate: string; endDate: string; unitsCovered: number; servicesPerYear: number; servicesCompleted: number; contractValue: number; notes: string; }[]' is not assignable to type 'MaintenanceContract[]'.
+    Type '{ status: string; id: string; clientName: string; phone: string; address: string; startDate: string; endDate: string; unitsCovered: number; servicesPerYear: number; servicesCompleted: number; contractValue: number; notes: string; }' is not assignable to type 'MaintenanceContract'.
+      Types of property 'status' are incompatible.
+        Type 'string' is not assignable to type '"Active" | "Expired" | "Renewed"'.
+src/pages/AMCTracker.tsx(4,202): error TS6133: 'setVisits' is declared but its value is never read.
+src/pages/AnimalFeedStore.tsx(4,115): error TS6133: 'setWeight' is declared but its value is never read.
+src/pages/AppointmentReminders.tsx(1,1): error TS6192: All imports in import declaration are unused.
+src/pages/AppointmentReminders.tsx(9,34): error TS2339: Property 'appointments' does not exist on type 'BusinessProfile'.
+src/pages/AsteroidMiningShipMfg.tsx(15,9): error TS6133: 'nav' is declared but its value is never read.
+src/pages/AstrologyCenter.tsx(4,263): error TS6133: 'setCharge' is declared but its value is never read.
+src/pages/AstrologyConsult.tsx(4,152): error TS6133: 'setCharge' is declared but its value is never read.
+src/pages/AttendanceTracker.tsx(3,18): error TS6133: 'AttendanceRecord' is declared but its value is never read.
+src/pages/AttendanceTracker.tsx(3,36): error TS6133: 'StudentProfile' is declared but its value is never read.
+src/pages/AttendanceTracker.tsx(14,10): error TS6133: 'saving' is declared but its value is never read.
+src/pages/AttendanceTracker.tsx(14,18): error TS6133: 'setSaving' is declared but its value is never read.
+src/pages/BarberAnalytics.tsx(3,1): error TS6133: 'BottomNav' is declared but its value is never read.
+src/pages/BarberAnalytics.tsx(6,18): error TS6133: 'AnimatePresence' is declared but its value is never read.
+src/pages/BarberAnalytics.tsx(8,115): error TS6133: 'tNoun' is declared but its value is never read.
+src/pages/BarberAnalytics.tsx(51,9): error TS6133: 'avgPerDay' is declared but its value is never read.
+src/pages/BarberAnalytics.tsx(52,9): error TS6133: 'bestDay' is declared but its value is never read.
+src/pages/BarberAnalytics.tsx(54,9): error TS6133: 'maxCount' is declared but its value is never read.
+src/pages/BarberAnalytics.tsx(60,9): error TS6133: 'topStaffId' is declared but its value is never read.
+src/pages/BarberDashboard.tsx(13,1): error TS6192: All imports in import declaration are unused.
+src/pages/BarberDashboard.tsx(36,9): error TS6133: 'nav' is declared but its value is never read.
+src/pages/BarberHome.tsx(10,55): error TS6133: 'signOutUser' is declared but its value is never read.
+src/pages/BarberHome.tsx(10,112): error TS6133: 'toggleSalonStop' is declared but its value is never read.
+src/pages/BarberHome.tsx(10,163): error TS6133: 'isBusinessTrialActive' is declared but its value is never read.
+src/pages/BarberHome.tsx(10,186): error TS6133: 'getBusinessTrialDaysLeft' is declared but its value is never read.
+src/pages/BarberHome.tsx(10,212): error TS6133: 'isBusinessSubscribed' is declared but its value is never read.
+src/pages/BarberHome.tsx(10,247): error TS6133: 'unreadCount' is declared but its value is never read.
+src/pages/BarberHome.tsx(14,10): error TS6133: 'weeklyData' is declared but its value is never read.
+src/pages/BarberHome.tsx(27,9): error TS6133: 'theme' is declared but its value is never read.
+src/pages/BarberHome.tsx(87,9): error TS6133: 'handleAddStory' is declared but its value is never read.
+src/pages/BarberHome.tsx(100,9): error TS6133: 'cancelledCount' is declared but its value is never read.
+src/pages/BarberSubscription.tsx(8,82): error TS6133: 'businessProfile' is declared but its value is never read.
+src/pages/BatteryShop.tsx(4,105): error TS6133: 'setVoltage' is declared but its value is never read.
+src/pages/BedOccupancyTracker.tsx(40,9): error TS6133: 'occupied' is declared but its value is never read.
+src/pages/BookingCalendar.tsx(16,103): error TS6133: 'setDuration' is declared but its value is never read.
+src/pages/ClassScheduler.tsx(15,205): error TS6133: 'setDuration' is declared but its value is never read.
+src/pages/ClinicAppointment.tsx(4,278): error TS6133: 'setFee' is declared but its value is never read.
+src/pages/CoachingCenter.tsx(4,97): error TS6133: 'setSection' is declared but its value is never read.
+src/pages/CodingBootcamp.tsx(4,219): error TS6133: 'setDuration' is declared but its value is never read.
+src/pages/ColdStorage.tsx(4,106): error TS6133: 'setUnit' is declared but its value is never read.
+src/pages/CoworkingSpace.tsx(4,114): error TS6133: 'setRate' is declared but its value is never read.
+src/pages/CricketAcademy.tsx(4,181): error TS6133: 'setFee' is declared but its value is never read.
+src/pages/CustomerAuth.tsx(11,44): error TS6133: 't' is declared but its value is never read.
+src/pages/CustomerHome.tsx(6,1): error TS6192: All imports in import declaration are unused.
+src/pages/CustomerHome.tsx(9,90): error TS6133: 'unreadCount' is declared but its value is never read.
+src/pages/CustomerHome.tsx(11,10): error TS6133: 'nearbyBusinesses' is declared but its value is never read.
+src/pages/CustomerHome.tsx(16,10): error TS6133: 'doneTokensCount' is declared but its value is never read.
+src/pages/CustomerHome.tsx(21,10): error TS6133: 'searchFocused' is declared but its value is never read.
+src/pages/CustomerHome.tsx(22,10): error TS6133: 'showTour' is declared but its value is never read.
+src/pages/CustomerHome.tsx(48,9): error TS6133: 'topRated' is declared but its value is never read.
+src/pages/CustomerLoyalty.tsx(6,23): error TS6133: 'setDoc' is declared but its value is never read.
+src/pages/CustomerLoyalty.tsx(6,31): error TS6133: 'increment' is declared but its value is never read.
+src/pages/CustomerLoyalty.tsx(50,9): error TS6133: 'unlockedRewards' is declared but its value is never read.
+src/pages/CustomerProfileEdit.tsx(164,85): error TS2304: Cannot find name 'triggerHaptic'.
+src/pages/CustomerProfileEdit.tsx(243,38): error TS2304: Cannot find name 'triggerHaptic'.
+src/pages/CustomerProfileEdit.tsx(276,36): error TS2304: Cannot find name 'triggerHaptic'.
+src/pages/CustomerTryOn.tsx(2,1): error TS6133: 'useNavigate' is declared but its value is never read.
+src/pages/CyberCafeManager.tsx(4,116): error TS6133: 'setRate' is declared but its value is never read.
+src/pages/CycleStore.tsx(4,146): error TS6133: 'setSize' is declared but its value is never read.
+src/pages/DailyReportDashboard.tsx(1,20): error TS6133: 'useEffect' is declared but its value is never read.
+src/pages/DailyReportDashboard.tsx(4,1): error TS6133: 'triggerHaptic' is declared but its value is never read.
+src/pages/DailyReportDashboard.tsx(11,34): error TS2339: Property 'appointments' does not exist on type 'BusinessProfile'.
+src/pages/DailyReportDashboard.tsx(48,165): error TS2339: Property 'staff' does not exist on type 'BusinessProfile'.
+src/pages/DigitalConsentForm.tsx(9,34): error TS2339: Property 'services' does not exist on type 'AppContextType'.
+src/pages/DigitalConsentForm.tsx(208,34): error TS7006: Parameter 's' implicitly has an 'any' type.
+src/pages/DigitalPrescription.tsx(234,72): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(locales?: LocalesArgument, options?: DateTimeFormatOptions | undefined): string', gave the following error.
+    Type '"short"' is not assignable to type '"numeric" | "2-digit" | undefined'.
+  Overload 2 of 3, '(locales?: string | string[] | undefined, options?: DateTimeFormatOptions | undefined): string', gave the following error.
+    Type '"short"' is not assignable to type '"numeric" | "2-digit" | undefined'.
+src/pages/DJEventBooking.tsx(10,9): error TS6133: 'totalRev' is declared but its value is never read.
+src/pages/DynamicPricing.tsx(3,38): error TS6133: 'ServiceItem' is declared but its value is never read.
+src/pages/DynamicPricing.tsx(9,34): error TS2339: Property 'services' does not exist on type 'AppContextType'.
+src/pages/DynamicPricing.tsx(196,38): error TS7006: Parameter 's' implicitly has an 'any' type.
+src/pages/EventManagement.tsx(4,149): error TS6133: 'setTime' is declared but its value is never read.
+src/pages/FloristShop.tsx(4,163): error TS6133: 'setUnit' is declared but its value is never read.
+src/pages/ForexBroker.tsx(8,9): error TS6133: 'nextMap' is declared but its value is never read.
+src/pages/FranchiseAuth.tsx(17,15): error TS2345: Argument of type '"franchise_admin"' is not assignable to parameter of type 'Role | null'.
+src/pages/FranchiseManager.tsx(4,238): error TS6133: 'setRoyaltyPercent' is declared but its value is never read.
+src/pages/GasAgency.tsx(4,178): error TS6133: 'setQuantity' is declared but its value is never read.
+src/pages/GasAgency.tsx(4,233): error TS6133: 'setPricePerCylinder' is declared but its value is never read.
+src/pages/GuestHouse.tsx(4,264): error TS6133: 'setRooms' is declared but its value is never read.
+src/pages/HairstyleTryOn.tsx(14,9): error TS6133: 'nav' is declared but its value is never read.
+src/pages/HearingScheduler.tsx(88,9): error TS6133: 'editHearing' is declared but its value is never read.
+src/pages/HearingScheduler.tsx(102,9): error TS6133: 'deleteHearing' is declared but its value is never read.
+src/pages/HearingScheduler.tsx(219,24): error TS6133: 'dateStr' is declared but its value is never read.
+src/pages/HearingScheduler.tsx(222,24): error TS6133: 'isPast' is declared but its value is never read.
+src/pages/HomeTuitionManager.tsx(4,210): error TS6133: 'setDurationMins' is declared but its value is never read.
+src/pages/HomeTuitionManager.tsx(4,332): error TS6133: 'setFeePerSession' is declared but its value is never read.
+src/pages/IceCreamParlour.tsx(4,118): error TS6133: 'setUnit' is declared but its value is never read.
+src/pages/MaglevTrainBuilder.tsx(15,9): error TS6133: 'nav' is declared but its value is never read.
+src/pages/MehndiArtist.tsx(4,265): error TS6133: 'setCharge' is declared but its value is never read.
+src/pages/MobileShop.tsx(4,261): error TS6133: 'setPaymentType' is declared but its value is never read.
+src/pages/MoneylenderBook.tsx(4,209): error TS6133: 'setTenure' is declared but its value is never read.
+src/pages/NotificationsPage.tsx(26,20): error TS2367: This comparison appears to be unintentional because the types 'Role | null' and '"barber"' have no overlap.
+src/pages/NursingHome.tsx(4,279): error TS6133: 'setDailyCharge' is declared but its value is never read.
+src/pages/OrderMeasurementSync.tsx(3,31): error TS2305: Module '"../store/AppContext"' has no exported member 'MeasurementsRecord'.
+src/pages/ParkingManager.tsx(4,116): error TS6133: 'setRate' is declared but its value is never read.
+src/pages/ProductRetailPOS.tsx(28,62): error TS2339: Property 'stockLevel' does not exist on type 'InventoryItem'.
+src/pages/ProductRetailPOS.tsx(39,41): error TS2339: Property 'stockLevel' does not exist on type 'InventoryItem'.
+src/pages/ProductRetailPOS.tsx(43,30): error TS2339: Property 'averageCost' does not exist on type 'InventoryItem'.
+src/pages/ProductRetailPOS.tsx(65,47): error TS2339: Property 'stockLevel' does not exist on type 'InventoryItem'.
+src/pages/ProductRetailPOS.tsx(101,72): error TS2339: Property 'stockLevel' does not exist on type 'InventoryItem'.
+src/pages/ProductRetailPOS.tsx(112,49): error TS2339: Property 'stockLevel' does not exist on type 'InventoryItem | { stockLevel: number; id: string; itemName: string; category: string; quantity: number; unit: string; alertThreshold: number; lastRestocked: string; }'.
+  Property 'stockLevel' does not exist on type 'InventoryItem'.
+src/pages/ProductRetailPOS.tsx(183,104): error TS2339: Property 'stockLevel' does not exist on type 'InventoryItem'.
+src/pages/ProductRetailPOS.tsx(184,105): error TS2339: Property 'averageCost' does not exist on type 'InventoryItem'.
+src/pages/PropertyListing.tsx(4,180): error TS6133: 'setBedrooms' is declared but its value is never read.
+src/pages/ReviewCollector.tsx(14,10): error TS6133: 'saving' is declared but its value is never read.
+src/pages/RoomAllocation.tsx(1,31): error TS6133: 'useMemo' is declared but its value is never read.
+src/pages/SareeShop.tsx(4,144): error TS6133: 'setFabric' is declared but its value is never read.
+src/pages/SchoolFees.tsx(4,204): error TS6133: 'setMonth' is declared but its value is never read.
+src/pages/SmartNotifications.tsx(1,1): error TS6133: 'useState' is declared but its value is never read.
+src/pages/SmartNotifications.tsx(4,1): error TS6133: 'triggerHaptic' is declared but its value is never read.
+src/pages/SmartNotifications.tsx(7,34): error TS2339: Property 'appointments' does not exist on type 'BusinessProfile'.
+src/pages/SparePartsCatalog.tsx(93,9): error TS6133: 'editPart' is declared but its value is never read.
+src/pages/SparePartsCatalog.tsx(245,49): error TS2304: Cannot find name 'editProf'.
+src/pages/SpaWellness.tsx(4,208): error TS6133: 'setCharge' is declared but its value is never read.
+src/pages/SportsArena.tsx(4,250): error TS6133: 'setRate' is declared but its value is never read.
+src/pages/StaffAttendance.tsx(14,10): error TS6133: 'saving' is declared but its value is never read.
+src/pages/StaffAttendance.tsx(15,38): error TS2339: Property 'staff' does not exist on type 'BusinessProfile'.
+src/pages/StationeryShop.tsx(4,104): error TS6133: 'setGsm' is declared but its value is never read.
+src/pages/SubscriptionManager.tsx(8,201): error TS6133: 'expired' is declared but its value is never read.
+src/pages/TherapistCalendar.tsx(16,10): error TS6133: 'assigningRoomFor' is declared but its value is never read.
+src/pages/TherapistCalendar.tsx(16,28): error TS6133: 'setAssigningRoomFor' is declared but its value is never read.
+src/pages/TherapistCalendar.tsx(92,11): error TS6133: 'assignedDoc' is declared but its value is never read.
+src/pages/TherapistCalendar.tsx(93,11): error TS6133: 'assignedRoom' is declared but its value is never read.
+src/pages/TrainingLog.tsx(4,108): error TS6133: 'setDuration' is declared but its value is never read.
+src/pages/VaccinationTracker.tsx(42,18): error TS2345: Argument of type '{ status: string; id: string; patientName: string; parentPhone: string; vaccineName: string; dueDate: string; completedDate?: string | undefined; notes: string; }[]' is not assignable to parameter of type 'SetStateAction<VaccinationRecord[]>'.
+  Type '{ status: string; id: string; patientName: string; parentPhone: string; vaccineName: string; dueDate: string; completedDate?: string | undefined; notes: string; }[]' is not assignable to type 'VaccinationRecord[]'.
+    Type '{ status: string; id: string; patientName: string; parentPhone: string; vaccineName: string; dueDate: string; completedDate?: string; notes: string; }' is not assignable to type 'VaccinationRecord'.
+      Types of property 'status' are incompatible.
+        Type 'string' is not assignable to type '"Pending" | "Completed" | "Overdue"'.
+src/pages/VaccinationTracker.tsx(104,20): error TS2345: Argument of type '(VaccinationRecord | { status: string; completedDate: string; id: string; patientName: string; parentPhone: string; vaccineName: string; dueDate: string; notes: string; })[]' is not assignable to parameter of type 'VaccinationRecord[]'.
+  Type 'VaccinationRecord | { status: string; completedDate: string; id: string; patientName: string; parentPhone: string; vaccineName: string; dueDate: string; notes: string; }' is not assignable to type 'VaccinationRecord'.
+    Type '{ status: string; completedDate: string; id: string; patientName: string; parentPhone: string; vaccineName: string; dueDate: string; notes: string; }' is not assignable to type 'VaccinationRecord'.
+      Types of property 'status' are incompatible.
+        Type 'string' is not assignable to type '"Pending" | "Completed" | "Overdue"'.
+src/pages/WaterTanker.tsx(4,211): error TS6133: 'setCanPrice' is declared but its value is never read.
